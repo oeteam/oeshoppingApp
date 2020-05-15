@@ -19,3 +19,7 @@ Route::get('/', function () {
 
 Route::get('/login', 'LoginController@index');
 Route::post('/login/checkLogin', 'LoginController@checkLogin');
+
+// Back Panel Dashboard
+Route::get('/backpanel/dashboard', 'Backpanel\DashboardController@dashboard');
+

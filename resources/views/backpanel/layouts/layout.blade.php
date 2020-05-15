@@ -11,30 +11,29 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/vendors/vendors.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/vendors/extensions/unslider.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="../../../css/backpanel/assets/vendors/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/backpanel/assets/vendors/extensions/unslider.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/backpanel/assets/vendors/weather-icons/climacons.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../assets/fonts/meteocons/style.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/backpanel/assets/vendors/charts/morris.css">
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/vendors/weather-icons/climacons.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/fonts/meteocons/style.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/vendors/charts/morris.css') }}">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../css/backpanel/assets/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/backpanel/assets/bootstrap-extended.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/backpanel/assets/colors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/backpanel/assets/components.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/bootstrap-extended.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/colors.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/components.min.css') }}">
     <!-- END: Theme CSS-->
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../css/backpanel/assets/core/menu/menu-types/horizontal-menu.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/backpanel/assets/core/colors/palette-gradient.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../assets/fonts/simple-line-icons/style.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../css/backpanel/assets/pages/timeline.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/core/menu-types/horizontal-menu.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/core/colors/palette-gradient.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/fonts/simple-line-icons/style.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/pages/timeline.min.css') }}">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../css/backpanel/assets/style.css">
     <!-- END: Custom CSS-->
 
   <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
@@ -1281,27 +1280,27 @@
 
 
     <!-- BEGIN: Vendor JS-->
-    <script src="../../../assets/vendors/js/vendors.min.js"></script>
+    <script src="../resources/js/backpanel/assets/vendors/vendors.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="../../../assets/vendors/js/ui/jquery.sticky.js"></script>
-    <script src="../../../assets/vendors/js/charts/jquery.sparkline.min.js"></script>
-    <script src="../../../assets/vendors/js/charts/raphael-min.js"></script>
-    <script src="../../../assets/vendors/js/charts/morris.min.js"></script>
-    <script src="../../../assets/vendors/js/extensions/unslider-min.js"></script>
-    <script src="../../../assets/vendors/js/timeline/horizontal-timeline.js"></script>
+    <script src="../resources/js/backpanel/assets/vendors/js/ui/jquery.sticky.js"></script>
+    <script src="../resources/js/backpanel/assets/vendors/js/charts/jquery.sparkline.min.js"></script>
+    <script src="../resources/js/backpanel/assets/vendors/js/charts/raphael-min.js"></script>
+    <script src="../resources/js/backpanel/assets/vendors/js/charts/morris.min.js"></script>
+    <script src="../resources/js/backpanel/assets/vendors/js/extensions/unslider-min.js"></script>
+    <script src="../resources/js/backpanel/assets/vendors/js/timeline/horizontal-timeline.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
-    <script src="../../../assets/js/core/menu.min.js"></script>
-    <script src="../../../assets/js/core/app.min.js"></script>
-    <script src="../../../assets/js/scripts/customizer.min.js"></script>
+    <script src="../resources/js/backpanel/assets/js/core/menu.min.js"></script>
+    <script src="../resources/js/backpanel/assets/js/core/app.min.js"></script>
+    <script src="../resources/js/backpanel/assets/js/scripts/customizer.min.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="../../../assets/js/scripts/ui/breadcrumbs-with-stats.min.js"></script>
-    <script src="../../../assets/js/scripts/pages/dashboard-ecommerce.min.js"></script>
+    <script src="../resources/js/backpanel/assets/js/scripts/ui/breadcrumbs-with-stats.min.js"></script>
+    <script src="../resources/js/backpanel/assets/js/scripts/pages/dashboard-ecommerce.min.js"></script>
     <!-- END: Page JS-->
 
   

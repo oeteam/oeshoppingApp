@@ -6,8 +6,8 @@
     <meta name="keywords" content="admin template, stack admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>Dashboard eCommerce - Stack Responsive Bootstrap 4 Admin Template</title>
-    <link rel="apple-touch-icon" href="../../../assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/images/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ URL::asset('resources/css/backpanel/assets/images/ico/apple-icon-120.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('resources/css/backpanel/assets/images/ico/favicon.ico') }}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
@@ -51,15 +51,16 @@
         <div class="navbar-header">
           <ul class="nav navbar-nav flex-row">
             <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="feather icon-menu font-large-1"></i></a></li>
-            <li class="nav-item"><a class="navbar-brand" href="../../../html/ltr/horizontal-menu-template-nav/index.html"><img class="brand-logo" alt="stack admin logo" src="../../../assets/images/logo/stack-logo-light.png">
-                <h2 class="brand-text">Stack</h2></a></li>
+            <li class="nav-item"><a class="navbar-brand" href="../../../html/ltr/horizontal-menu-template-nav/index.html">
+                <!-- <img class="brand-logo" alt="stack admin logo" src="../../../assets/images/logo/stack-logo-light.png"> -->
+                <h2 class="brand-text">Shopping App</h2></a></li>
             <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
           </ul>
         </div>
         <div class="navbar-container content">
           <div class="collapse navbar-collapse" id="navbar-mobile">
             <ul class="nav navbar-nav mr-auto float-left">
-              <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="feather icon-menu"></i></a></li>
+              <!-- <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="feather icon-menu"></i></a></li>
               <li class="dropdown nav-item mega-dropdown d-none d-lg-block"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown">Mega</a>
                 <ul class="mega-dropdown-menu dropdown-menu row p-1">
                   <li class="col-md-4 bg-mega p-2">
@@ -114,13 +115,13 @@
                   <div class="search-input-close"><i class="feather icon-x"></i></div>
                   <ul class="search-list"></ul>
                 </div>
-              </li>
+              </li> -->
             </ul>
             <ul class="nav navbar-nav float-right">
-              <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language"></span></a>
+              <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-flag"></i><span class="selected-language"></span></a>
                 <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a><a class="dropdown-item" href="#" data-language="fr"><i class="flag-icon flag-icon-fr"></i> French</a><a class="dropdown-item" href="#" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a><a class="dropdown-item" href="#" data-language="de"><i class="flag-icon flag-icon-de"></i> German</a></div>
               </li>
-              <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-danger badge-up">5</span></a>
+              <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="fa fa-bell"></i><span class="badge badge-pill badge-danger badge-up">5</span></a>
                 <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                   <li class="dropdown-menu-header">
                     <h6 class="dropdown-header m-0"><span class="grey darken-2">Notifications</span><span class="notification-tag badge badge-danger float-right m-0">5 New</span></h6>
@@ -167,7 +168,7 @@
                   <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all notifications</a></li>
                 </ul>
               </li>
-              <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-mail"></i><span class="badge badge-pill badge-warning badge-up">3</span></a>
+              <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge badge-pill badge-warning badge-up">3</span></a>
                 <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                   <li class="dropdown-menu-header">
                     <h6 class="dropdown-header m-0"><span class="grey darken-2">Messages</span><span class="notification-tag badge badge-warning float-right m-0">4 New</span></h6>
@@ -213,7 +214,7 @@
                 </ul>
               </li>
               <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                  <div class="avatar avatar-online"><img src="../../../assets/images/portrait/small/avatar-s-1.png" alt="avatar"><i></i></div><span class="user-name">John Doe</span></a>
+                  <div class="avatar avatar-online"><img src="{{ URL::asset('resources/css/backpanel/assets/images/avatar/avatar-s-1.png') }}" alt="avatar"><i></i></div><span class="user-name">John Doe</span></a>
                 <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="user-profile.html"><i class="feather icon-user"></i> Edit Profile</a><a class="dropdown-item" href="email.html"><i class="feather icon-mail"></i> My Inbox</a><a class="dropdown-item" href="user-cards.html"><i class="feather icon-check-square"></i> Task</a><a class="dropdown-item" href="chat.html"><i class="feather icon-message-square"></i> Chats</a>
                   <div class="dropdown-divider"></div><a class="dropdown-item" href="login-with-bg-image.html"><i class="feather icon-power"></i> Logout</a>
                 </div>
@@ -232,7 +233,9 @@
       <div class="navbar-container main-menu-content" data-menu="menu-container">
         <!-- include ../../../includes/mixins-->
         <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
-          <li class="dropdown nav-item active" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown"><i class="feather icon-home"></i><span data-i18n="Dashboard">Dashboard</span></a>
+          <li class="nav-item active" data-menu=""><a class="nav-link" href="{{ url('/backpanel/dashboard') }}"><i class="fa fa-bar-chart"></i><span>Dashboard</span></a>
+          <li class="nav-item" data-menu=""><a class="nav-link" href="{{ url('/backpanel/users') }}"><i class="fa fa-users"></i><span>Users</span></a>
+         <!--  <li class="dropdown nav-item active" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown"><i class="feather icon-home"></i><span data-i18n="Dashboard">Dashboard</span></a>
             <ul class="dropdown-menu">
               <li class="active" data-menu=""><a class="dropdown-item" href="dashboard-ecommerce.html" data-i18n="eCommerce" data-toggle="dropdown">eCommerce</a>
               </li>
@@ -243,6 +246,7 @@
               <li data-menu=""><a class="dropdown-item" href="dashboard-crm.html" data-i18n="CRM" data-toggle="dropdown">CRM</a>
               </li>
             </ul>
+          </li>
           </li>
           <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"><i class="feather icon-monitor"></i><span data-i18n="Templates">Templates</span></a>
             <ul class="dropdown-menu">
@@ -887,7 +891,7 @@
                 </ul>
               </li>
             </ul>
-          </li>
+          </li> -->
         </ul>
       </div>
       <!-- /horizontal menu content-->
@@ -903,7 +907,7 @@
 
 
     <!-- BEGIN: Customizer-->
-    <div class="customizer border-left-blue-grey border-left-lighten-4 d-none d-xl-block"><a class="customizer-close" href="#"><i class="feather icon-x font-medium-3"></i></a><a class="customizer-toggle bg-danger" href="#"><i class="feather icon-settings font-medium-3 fa-spin fa fa-spin fa-fw white"></i></a><div class="customizer-content p-2 ps ps--active-y">
+    <div class="customizer border-left-blue-grey border-left-lighten-4 d-none d-xl-block"><a class="customizer-close" href="#"><i class="feather icon-x font-medium-3"></i></a><a class="customizer-toggle bg-danger" href="#"><i class="fa fa-cogs font-medium-3 fa-spin fa fa-spin fa-fw white"></i></a><div class="customizer-content p-2 ps ps--active-y">
 	<h4 class="text-uppercase mb-0">Theme Customizer</h4>
 	<hr>
 	<p>Customize &amp; Preview in Real Time</p>
@@ -1268,7 +1272,7 @@
     <!-- End: Customizer-->
 
     <!-- Buynow Button-->
-    <div class="buy-now"><a href="https://1.envato.market/stack_admin" target="_blank" class="btn bg-gradient-directional-purple white btn-purple btn-glow px-2">Buy Now</a></div>
+    <!-- <div class="buy-now"><a href="https://1.envato.market/stack_admin" target="_blank" class="btn bg-gradient-directional-purple white btn-purple btn-glow px-2">Buy Now</a></div> -->
     <div class="sidenav-overlay" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
     <div class="drag-target" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
 
@@ -1280,27 +1284,27 @@
 
 
     <!-- BEGIN: Vendor JS-->
-    <script src="../resources/js/backpanel/assets/vendors/vendors.min.js"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/vendors/vendors.min.js') }}"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="../resources/js/backpanel/assets/vendors/js/ui/jquery.sticky.js"></script>
-    <script src="../resources/js/backpanel/assets/vendors/js/charts/jquery.sparkline.min.js"></script>
-    <script src="../resources/js/backpanel/assets/vendors/js/charts/raphael-min.js"></script>
-    <script src="../resources/js/backpanel/assets/vendors/js/charts/morris.min.js"></script>
-    <script src="../resources/js/backpanel/assets/vendors/js/extensions/unslider-min.js"></script>
-    <script src="../resources/js/backpanel/assets/vendors/js/timeline/horizontal-timeline.js"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/vendors/ui/jquery.sticky.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/vendors/charts/jquery.sparkline.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/vendors/charts/raphael-min.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/vendors/charts/morris.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/vendors/extensions/unslider-min.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/vendors/timeline/horizontal-timeline.js') }}"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
-    <script src="../resources/js/backpanel/assets/js/core/menu.min.js"></script>
-    <script src="../resources/js/backpanel/assets/js/core/app.min.js"></script>
-    <script src="../resources/js/backpanel/assets/js/scripts/customizer.min.js"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/core/app-menu.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/core/app.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/scripts/pages/ui/customizer.min.js') }}"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="../resources/js/backpanel/assets/js/scripts/ui/breadcrumbs-with-stats.min.js"></script>
-    <script src="../resources/js/backpanel/assets/js/scripts/pages/dashboard-ecommerce.min.js"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/js/scripts/ui/breadcrumbs-with-stats.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/scripts/pages/dashboard-ecommerce.min.js') }}"></script>
     <!-- END: Page JS-->
 
   

@@ -17,9 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', 'LoginController@index');
-Route::post('/login/checkLogin', 'LoginController@checkLogin');
+Route::get('backpanel/login', 'LoginController@index');
+Route::post('backpanel/login/checkLogin', 'LoginController@checkLogin');
 
 // Back Panel Dashboard
 Route::get('/backpanel/dashboard', 'Backpanel\DashboardController@dashboard');
+Route::get('/backpanel/users', 'Backpanel\UserController@index');
+Route::get('/backpanel/user/adduser', 'Backpanel\UserController@adduser');
+Route::get('/backpanel/users/submituser', 'Backpanel\UserController@submituser');
+
 

@@ -22,7 +22,7 @@ class LoginController extends Controller
     	);
 
     	if(Auth::attempt($user_data)) {
-    		return redirect('login/dashboard');
+    		return redirect('backpanel/dashboard');
     	} else {
     		return back()->with('error','Incorrect login crendentials');
     	}

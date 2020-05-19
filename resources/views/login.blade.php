@@ -42,7 +42,7 @@
                     </ul>
                 </div>
             @endif
-            <form method="post" action="{{ url('/login/checkLogin') }}">
+            <form method="post" action="{{ url('/backpanel/login/checkLogin') }}">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label>Email</label>

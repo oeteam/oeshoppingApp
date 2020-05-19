@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('backpanel', 'LoginController@index');
 Route::get('backpanel/login', 'LoginController@index');
 Route::post('backpanel/login/checkLogin', 'LoginController@checkLogin');
 

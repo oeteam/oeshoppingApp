@@ -25,5 +25,6 @@ Route::get('/backpanel/dashboard', 'Backpanel\DashboardController@dashboard');
 Route::get('/backpanel/users', 'Backpanel\UserController@index');
 Route::get('/backpanel/user/adduser', 'Backpanel\UserController@adduser');
 Route::get('/backpanel/users/submituser', 'Backpanel\UserController@submituser');
+Route::get('/backpanel/users/userslist', 'Backpanel\UserController@userslist');
 
 

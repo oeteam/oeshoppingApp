@@ -6,6 +6,9 @@
     <meta name="keywords" content="admin template, stack admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>Dashboard eCommerce - Stack Responsive Bootstrap 4 Admin Template</title>
+    <script src="{{ URL::asset('resources/js/jquery.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/datatables.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/jquery-ui.js') }}"></script>
     <link rel="apple-touch-icon" href="{{ URL::asset('resources/css/backpanel/assets/images/ico/apple-icon-120.png') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('resources/css/backpanel/assets/images/ico/favicon.ico') }}">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
@@ -34,6 +37,7 @@
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" href="{{ URL::asset('resources/css/backpanel/assets/datatables.min.css') }}">
     <!-- END: Custom CSS-->
 
   <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
@@ -176,7 +180,7 @@
                   <li class="scrollable-container media-list ps"><a href="javascript:void(0)">
                       <div class="media">
                         <div class="media-left">
-                          <div class="avatar avatar-online avatar-sm rounded-circle"><img src="../../../assets/images/portrait/small/avatar-s-1.png" alt="avatar"><i></i></div>
+                          <div class="avatar avatar-online avatar-sm rounded-circle"><img src="{{ URL::asset('resources/css/backpanel/assets/images/avatar/avatar-s-1.png') }}" alt="avatar"><i></i></div>
                         </div>
                         <div class="media-body">
                           <h6 class="media-heading">Margaret Govan</h6>
@@ -185,7 +189,7 @@
                         </div>
                       </div></a><a href="javascript:void(0)">
                       <div class="media">
-                        <div class="media-left"><span class="avatar avatar-sm avatar-busy rounded-circle"><img src="../../../assets/images/portrait/small/avatar-s-2.png" alt="avatar"><i></i></span></div>
+                        <div class="media-left"><span class="avatar avatar-sm avatar-busy rounded-circle"><img src="{{ URL::asset('resources/css/backpanel/assets/images/avatar/avatar-s-2.png') }}" alt="avatar"><i></i></span></div>
                         <div class="media-body">
                           <h6 class="media-heading">Bret Lezama</h6>
                           <p class="notification-text font-small-3 text-muted">I have seen your work, there is</p><small>
@@ -194,7 +198,7 @@
                       </div></a><a href="javascript:void(0)">
                       <div class="media">
                         <div class="media-left">
-                          <div class="avatar avatar-online avatar-sm rounded-circle"><img src="../../../assets/images/portrait/small/avatar-s-3.png" alt="avatar"><i></i></div>
+                          <div class="avatar avatar-online avatar-sm rounded-circle"><img src="{{ URL::asset('resources/css/backpanel/assets/images/avatar/avatar-s-3.png') }}" alt="avatar"><i></i></div>
                         </div>
                         <div class="media-body">
                           <h6 class="media-heading">Carie Berra</h6>
@@ -203,7 +207,7 @@
                         </div>
                       </div></a><a href="javascript:void(0)">
                       <div class="media">
-                        <div class="media-left"><span class="avatar avatar-sm avatar-away rounded-circle"><img src="../../../assets/images/portrait/small/avatar-s-6.png" alt="avatar"><i></i></span></div>
+                        <div class="media-left"><span class="avatar avatar-sm avatar-away rounded-circle"><img src="{{ URL::asset('resources/css/backpanel/assets/images/avatar/avatar-s-6.png') }}" alt="avatar"><i></i></span></div>
                         <div class="media-body">
                           <h6 class="media-heading">Eric Alsobrook</h6>
                           <p class="notification-text font-small-3 text-muted">We have project party this saturday.</p><small>
@@ -1299,11 +1303,11 @@
     <!-- BEGIN: Theme JS-->
     <script src="{{ URL::asset('resources/js/backpanel/assets/core/app-menu.min.js') }}"></script>
     <script src="{{ URL::asset('resources/js/backpanel/assets/core/app.min.js') }}"></script>
-    <script src="{{ URL::asset('resources/js/backpanel/assets/scripts/pages/ui/customizer.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/scripts/customizer.min.js') }}"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="{{ URL::asset('resources/js/backpanel/assets/js/scripts/ui/breadcrumbs-with-stats.min.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/scripts/ui/breadcrumbs-with-stats.min.js') }}"></script>
     <script src="{{ URL::asset('resources/js/backpanel/assets/scripts/pages/dashboard-ecommerce.min.js') }}"></script>
     <!-- END: Page JS-->
 

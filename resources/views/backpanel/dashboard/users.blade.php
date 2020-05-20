@@ -7,8 +7,8 @@
     <div class="content-body">
         <section class="users-list-wrapper">
             <div class="users-list-filter px-1" style="padding-bottom: 15px"> 
-                <div class="col-12 col-sm-6 pull-right col-lg-3">
-                    <a href="{{ url('/backpanel/user/adduser') }}"><button class="btn btn-block btn-primary glow">Add new</button></a>
+                <div class="col-sm-2 pull-right col-lg-1">
+                    <a href="{{ url('/backpanel/user/adduser') }}"><button class="btn btn-block btn-primary glow">Add</button></a>
                 </div><br><br>
             </div>
             <div class="users-list-table">

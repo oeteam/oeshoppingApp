@@ -51,15 +51,19 @@
     </div>
 </div>
 <script>
-    var user_table = $('#users-list-datatable').dataTable({
-        "bDestroy": true,
-        "ajax": {
-            url : '{{ url("/backpanel/user/userslist") }}',
-            type : 'GET'
-        },
-        "fnDrawCallback": function(settings){
-            $('[data-toggle="tooltip"]').tooltip();          
-        }
+    $(function () {
+
+        var table = $('#users-list-datatable').dataTable({
+            processing: true,
+            serverSide: true,
+            ajax: "{{ route('users.index') }}",
+            columns: [
+                {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+                {data: 'name', name: 'name'},
+                {data: 'email', name: 'email'},
+                {data: 'action', name: 'action', orderable: false, searchable: false},
+            ]
+        });   
     });
 </script>
 @endsection

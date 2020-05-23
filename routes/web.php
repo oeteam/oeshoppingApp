@@ -27,5 +27,6 @@ Route::get('/backpanel/users', 'Backpanel\UserController@index');
 Route::get('/backpanel/user/adduser', 'Backpanel\UserController@adduser');
 Route::get('/backpanel/users/submituser', 'Backpanel\UserController@submituser');
 Route::get('/backpanel/users/userslist', 'Backpanel\UserController@userslist');
+Route::get('users', ['uses'=>'Backpanel\UserController@index', 'as'=>'users.index']);
 
 

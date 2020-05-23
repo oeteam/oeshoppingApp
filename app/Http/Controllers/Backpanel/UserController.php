@@ -6,12 +6,26 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use DB;
+use App\User;
+use DataTables;
 
 class UserController extends Controller
 {
-    function index() {
-        $users = DB::select('select * from users');
-        return view('backpanel/dashboard/users',['users'=>$users]);
+    function index(Request $request) {
+        if ($request->ajax()) {
+            $data = User::latest()->get();
+            return Datatables::of($data)
+                    ->addIndexColumn()
+                    ->addColumn('action', function($row){
+   
+                           $btn = '<a href="javascript:void(0)" class="edit btn btn-primary btn-sm">View</a>';
+     
+                            return $btn;
+                    })
+                    ->rawColumns(['action'])
+                    ->make(true);
+        }
+        return view('backpanel/dashboard/users');
     }
     function adduser(Request $request) {
         return view('backpanel/dashboard/adduser');

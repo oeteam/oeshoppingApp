@@ -1,14 +1,21 @@
 @extends('backpanel/layouts.layout')
 
 @section('content')
-
+<style type="text/css">
+    .dataTables_filter {
+        float: right;
+    }
+</style>
 <div class="content-wrapper">
     <div class="content-header row">
     </div>
     <div class="content-body">
         <section class="users-list-wrapper">
-            <div class="users-list-filter px-1" style="padding-bottom: 15px"> 
-                <div class="col-sm-2 pull-right col-lg-1">
+            <div class="users-list-filter px-1 row" style="padding-bottom: 15px"> 
+                <div class="col-md-10"> 
+                    <h1>Laravel 7 Datatables Tutorial</h1>
+                </div>
+                <div class="col-md-2">
                     <a href="{{ url('/backpanel/user/adduser') }}"><button class="btn btn-block btn-primary glow">Add</button></a>
                 </div><br><br>
             </div>
@@ -24,21 +31,19 @@
                         <div class="card-body">
                             <!-- datatable start -->
                             <div class="table-responsive">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <table id="users-list-datatable" class="table">
-                                        <thead>
-                                            <tr role="row">
-                                                <th>id</th>
-                                                <th>name</th>
-                                                <th>Email</th>
-                                                <th>edit</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>                           
-                                        </tbody>
-                                    </table>
-                                </div>
+                            <div class="container">
+                                <table id="users-list-datatable" class="table table-bordered data-table">
+                                    <thead>
+                                        <tr role="row">
+                                            <th>id</th>
+                                            <th>name</th>
+                                            <th>Email</th>
+                                            <th>edit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>                           
+                                    </tbody>
+                                </table>
                             </div>
                             </div>
                             <!-- datatable ends -->

@@ -33,7 +33,7 @@ class UserController extends Controller
               ->addIndexColumn()
               ->addColumn('action', function($row){
 
-                     $btn = '<a href="javascript:void(0)" class="edit btn btn-primary btn-sm"><i class="far fa-edit"></i></a>';
+                     $btn = '<a href="javascript:void(0)" class="edit btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>';
 
                       return $btn;
               })

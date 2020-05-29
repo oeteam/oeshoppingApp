@@ -12,18 +12,27 @@ use DataTables;
 class UserController extends Controller
 {
     function index() {
-        $users = DB::select('select * from users');
-        return view('backpanel/users/users',['users'=>$users]);
+        return view('backpanel/users/users');
     }
-    function adduser(Request $request) {
-        return view('backpanel/users/adduser');
+    function adduser($id=null) {
+      $users='';
+      if($id!=null) {
+        $users = DB::select('select * from users where id = ?',[$id]);
+      }
+      return view('backpanel/users/adduser',['users'=>$users]);
     }
     function submituser(Request $request) {
+        $id = $request->input('id');
         $name = $request->input('name');
         $email = $request->input('email');
         $password = $request->input('password');
-        DB::insert('insert into users (name,email,password) values(?,?,?)',[$name,$email,Hash::make($password)]);
-        return redirect('/backpanel/users')->with('success','User added successfully');
+        if($id=="") {
+          DB::insert('insert into users (name,email,password) values(?,?,?)',[$name,$email,Hash::make($password)]);
+          return redirect('/backpanel/users')->with('success','User added successfully');
+        } else {
+          DB::update('update users set name = ?,email = ?,password = ? where id = ?',[$name,$email,$password,$id]);
+          return redirect('/backpanel/users')->with('success','User updated successfully');
+        }
     }
     function userslist(Request $request) {
       if ($request->ajax()) {
@@ -33,7 +42,7 @@ class UserController extends Controller
               ->addIndexColumn()
               ->addColumn('action', function($row){
 
-                     $btn = '<a href="javascript:void(0)" class="edit btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>';
+                     $btn = '<a href="'.url("/backpanel/user/adduser",$row->id).'" class="edit btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>';
 
                       return $btn;
               })

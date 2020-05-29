@@ -29,10 +29,10 @@
                                             <table id="users-list-datatable" class="table dataTable no-footer" role="grid" aria-describedby="users-list-datatable_info">
                                                 <thead>
                                                     <tr role="row">
-                                                        <th>id</th>
-                                                        <th>name</th>
+                                                        <th>Id</th>
+                                                        <th>Name</th>
                                                         <th>Email</th>
-                                                        <th>edit</th>
+                                                        <th>Edit</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>                           

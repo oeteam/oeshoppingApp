@@ -13,7 +13,7 @@
         <section class="users-list-wrapper">
             <div class="users-list-filter px-1 row" style="padding-bottom: 15px"> 
                 <div class="col-md-10"> 
-                    <h1>Laravel 7 Datatables Tutorial</h1>
+                    <h1>Users</h1>
                 </div>
                 <div class="col-md-2">
                     <a href="{{ url('/backpanel/user/adduser') }}"><button class="btn btn-block btn-primary glow">Add</button></a>
@@ -35,10 +35,10 @@
                                 <table id="users-list-datatable" class="table table-bordered data-table">
                                     <thead>
                                         <tr role="row">
-                                            <th>id</th>
-                                            <th>name</th>
+                                            <th>Id</th>
+                                            <th>Name</th>
                                             <th>Email</th>
-                                            <th>edit</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>                           

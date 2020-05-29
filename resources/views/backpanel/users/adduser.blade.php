@@ -14,18 +14,19 @@
                     <div class="card-body">
                         <!-- users edit account form start -->
                         <form novalidate="" action="{{ url('/backpanel/users/submituser') }}" method="post/">
+                            <input type="hidden" name="id" value="@isset($users[0]->id){{ $users[0]->id }}@endisset">
                             <div class="row">
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <div class="controls">
                                             <label>Name</label>
-                                            <input type="text" class="form-control" placeholder="Name" required="" data-validation-required-message="This name field is required" name="name">
+                                            <input type="text" class="form-control" placeholder="Name" required="" data-validation-required-message="This name field is required" name="name"value="@isset($users[0]->name){{ $users[0]->name }}@endisset">
                                         <div class="help-block"></div></div>
                                     </div>
                                     <div class="form-group">
                                         <div class="controls">
                                             <label>Password</label>
-                                            <input type="password" class="form-control" placeholder="Password" required="" data-validation-required-message="This password field is required" name="password">
+                                            <input type="password" class="form-control" placeholder="Password" required="" data-validation-required-message="This password field is required" name="password" value="">
                                         <div class="help-block"></div></div>
                                     </div>
                                 </div>
@@ -33,7 +34,7 @@
                                     <div class="form-group">
                                         <div class="controls">
                                             <label>E-mail</label>
-                                            <input type="email" class="form-control" placeholder="Email" name="email" required="" data-validation-required-message="This email field is required">
+                                            <input type="email" class="form-control" placeholder="Email" name="email" required="" data-validation-required-message="This email field is required"  value="@isset($users[0]->email){{ $users[0]->email }}@endisset">
                                         <div class="help-block"></div></div>
                                     </div>
                                 </div>

@@ -27,3 +27,5 @@ Route::get('/backpanel/users', 'Backpanel\UserController@index');
 Route::get('/backpanel/user/adduser/{id?}', 'Backpanel\UserController@adduser');
 Route::get('/backpanel/users/submituser', 'Backpanel\UserController@submituser');
 Route::any('/backpanel/users/userslist', 'Backpanel\UserController@userslist');
+Route::get('/backpanel/user/deleteuser/{id}', 'Backpanel\UserController@deleteuser');
+Route::get('/backpanel/users/changestatus', 'Backpanel\UserController@changestatus');

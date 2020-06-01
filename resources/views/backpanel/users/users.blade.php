@@ -38,6 +38,7 @@
                                             <th>Id</th>
                                             <th>Name</th>
                                             <th>Email</th>
+                                            <th>Disable/Enable</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -56,7 +57,6 @@
 </div>
 <script type="text/javascript">
   $(function () {
-    
     var table = $('#users-list-datatable').DataTable({
         processing: true,
         serverSide: true,
@@ -65,11 +65,25 @@
             {data: 'DT_RowIndex', name: 'DT_RowIndex'},
             {data: 'name', name: 'name'},
             {data: 'email', name: 'email'},
+            {data: 'status', name: 'status', orderable: false, searchable: false},
             {data: 'action', name: 'action', orderable: false, searchable: false},
         ]
     });
     
+    
   });
+  function change(user_id) {
+    var status = $('.status-toggle'+user_id).is(':checked') == true ? 0 : 1; 
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: '{{ url("/backpanel/users/changestatus") }}',
+        data: {'status': status, 'user_id': user_id},
+        success: function(data) {
+          console.log(data.success)
+        }
+    });
+  }
 </script>
 
 @endsection

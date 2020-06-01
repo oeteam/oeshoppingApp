@@ -9,7 +9,13 @@
             <div class="card">
                 <div class="card-content">
                     <div class="card-header">
-                        <h4 class="card-title" style="color: #009C9F">Add User</h4>
+                        <h4 class="card-title" style="color: #009C9F">
+                            @if(isset($users[0]->id))
+                                Edit User 
+                            @else
+                                Add User
+                            @endif
+                        </h4>
                     </div>
                     <div class="card-body">
                         <!-- users edit account form start -->
@@ -39,9 +45,14 @@
                                     </div>
                                 </div>
                                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-end mt-1">
-                                    <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">Save
-                                        changes</button>
-                                    <button type="reset" class="btn btn-light">Cancel</button>
+                                    <button type="submit" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1">
+                                        @if(isset($users[0]->id))
+                                            Edit 
+                                        @else
+                                            Add
+                                        @endif
+                                    </button>
+                                    <button class="btn mb-1 mb-sm-0 mr-0 mr-sm-1 btn-danger glow"><a href="{{ url('/backpanel/users') }}" style="color: white">Cancel</a></button>
                                 </div>
                             </div>
                         </form>

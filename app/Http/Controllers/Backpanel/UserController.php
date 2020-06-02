@@ -22,6 +22,11 @@ class UserController extends Controller
       return view('backpanel/users/adduser',['users'=>$users]);
     }
     function submituser(Request $request) {
+        $errors = $this->validate($request,[
+         'name'=>'required',
+         'email'=>'required|email',
+         'password'=>'required|min:5|max:8'
+        ]);
         $id = $request->input('id');
         $name = $request->input('name');
         $email = $request->input('email');
@@ -30,7 +35,7 @@ class UserController extends Controller
           DB::insert('insert into users (name,email,password) values(?,?,?)',[$name,$email,Hash::make($password)]);
           return redirect('/backpanel/users')->with('success','User added successfully');
         } else {
-          DB::update('update users set name = ?,email = ?,password = ? where id = ?',[$name,$email,$password,$id]);
+          DB::update('update users set name = ?,email = ?,password = ? where id = ?',[$name,$email,Hash::make($password),$id]);
           return redirect('/backpanel/users')->with('success','User updated successfully');
         }
     }

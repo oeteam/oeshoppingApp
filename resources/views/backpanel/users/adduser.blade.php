@@ -20,6 +20,18 @@
                     <div class="card-body">
                         <!-- users edit account form start -->
                         <form novalidate="" action="{{ url('/backpanel/users/submituser') }}" method="post/">
+                            @if(count($errors))
+            <div class="alert alert-danger">
+                <strong>Whoops!</strong> There were some problems with your input.
+                <br/>
+                <ul>
+                    @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
                             <input type="hidden" name="id" value="@isset($users[0]->id){{ $users[0]->id }}@endisset">
                             <div class="row">
                                 <div class="col-12 col-sm-6">

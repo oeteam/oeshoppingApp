@@ -300,6 +300,7 @@
         <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
           <li class="nav-item active" data-menu=""><a class="nav-link" href="{{ url('/backpanel/dashboard') }}"><i class="fa fa-bar-chart"></i><span>Dashboard</span></a>
           <li class="nav-item" data-menu=""><a class="nav-link" href="{{ url('/backpanel/users') }}"><i class="fa fa-users"></i><span>Users</span></a>
+          <li class="nav-item" data-menu=""><a class="nav-link" href="{{ url('/backpanel/suppliers') }}"><i class="fa fa-user-secret"></i><span>Suppliers</span></a>
          <!--  <li class="dropdown nav-item active" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown"><i class="feather icon-home"></i><span data-i18n="Dashboard">Dashboard</span></a>
             <ul class="dropdown-menu">
               <li class="active" data-menu=""><a class="dropdown-item" href="dashboard-ecommerce.html" data-i18n="eCommerce" data-toggle="dropdown">eCommerce</a>

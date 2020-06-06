@@ -1010,6 +1010,7 @@
     <!-- END: Page JS-->
     <script src="{{ URL::asset('resources/js/datatables.min.js') }}"></script>
     <script src="{{ URL::asset('resources/js/jquery-ui.js') }}"></script>
+    <script src="{{ URL::asset('resources/js/backpanel/assets/scripts/sweet-alert.js') }}"></script>
   
   <!-- END: Body-->
 </body></html>

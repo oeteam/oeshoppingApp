@@ -90,6 +90,24 @@
         }
     });
   }
+  function supplierdelete(id) {
+    swal({
+      title: 'Are you sure?',
+      text: 'Do you want to delete this supplier?',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, I am sure!',
+      cancelButtonText: 'No, cancel it!'
+    }, function(isConfirm){
+    if (isConfirm) {     
+       window.location ='{{ url("/backpanel/suppliers/deletesupplier",'+id+') }}';
+   } 
+   // ).then((result) => {
+   //    if (result.value) {
+   //          window.location ='{{ url("/backpanel/suppliers/deletesupplier",'+id+') }}';
+   //    } 
+   //  })
+})
+}
 </script>
 
 @endsection

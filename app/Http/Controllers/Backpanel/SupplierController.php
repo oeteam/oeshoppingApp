@@ -66,7 +66,7 @@ class SupplierController extends Controller
                     return $switch;
               })
               ->addColumn('action', function($row){
-                    $btn = '<a href="'.url("/backpanel/suppliers/addsupplier",$row->id).'" class="edit btn btn-primary btn-sm"><i class="fa fa-edit"></i></a> <a href="'.url("/backpanel/suppliers/deletesupplier",$row->id).'" class="delete btn btn-primary btn-sm"><i class="fa fa-trash"></i></a>';
+                    $btn = '<a href="'.url("/backpanel/suppliers/addsupplier",$row->id).'" class="edit btn btn-primary btn-sm"><i class="fa fa-edit"></i></a> <a href="" onclick="supplierdelete('.$row->id.')" class="delete btn btn-primary btn-sm"><i class="fa fa-trash"></i></a>';
 
                     return $btn;
               })

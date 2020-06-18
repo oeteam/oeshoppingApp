@@ -39,6 +39,7 @@ Route::get('/backpanel/suppliers/addsupplier/{id?}', 'Backpanel\SupplierControll
 Route::get('/backpanel/suppliers/submitsupplier', 'Backpanel\SupplierController@submitsupplier');
 Route::get('/backpanel/suppliers/changestatus', 'Backpanel\SupplierController@changestatus');
 Route::get('/backpanel/suppliers/deletesupplier/{id}', 'Backpanel\SupplierController@deletesupplier');
+Route::any('/backpanel/suppliers/getStates', 'Backpanel\SupplierController@getStates');
 
 
 

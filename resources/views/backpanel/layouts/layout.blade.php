@@ -984,7 +984,13 @@
     </footer>
     <!-- END: Footer-->
 
-
+    <script type="text/javascript">
+      $('.nav-item').click(function(){
+        alert("hi");
+         $('.nav-item').removeClass('active');   
+         $(this).addClass('active');   
+      })
+    </script>
     <!-- BEGIN: Vendor JS-->
     <script src="{{ URL::asset('resources/js/backpanel/assets/vendors/vendors.min.js') }}"></script>
     <!-- BEGIN Vendor JS-->

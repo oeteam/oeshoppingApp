@@ -19,23 +19,26 @@ class UserController extends Controller
       if($id!=null) {
         $users = DB::select('select * from users where id = ?',[$id]);
       }
-      return view('backpanel/users/adduser',['users'=>$users]);
+      $roles = DB::select('select * from user_roles');
+      return view('backpanel/users/adduser',['users'=>$users,'roles'=>$roles]);
     }
     function submituser(Request $request) {
         $errors = $this->validate($request,[
          'name'=>'required',
          'email'=>'required|email',
-         'password'=>'required|min:5|max:8'
+         'password'=>'required|min:5|max:8',
+         'role'=>'required'
         ]);
         $id = $request->input('id');
         $name = $request->input('name');
         $email = $request->input('email');
+        $roleid = $request->input('role');
         $password = $request->input('password');
         if($id=="") {
-          DB::insert('insert into users (name,email,password) values(?,?,?)',[$name,$email,Hash::make($password)]);
+          DB::insert('insert into users (name,email,password) values(?,?,?)',[$name,$email,Hash::make($password),$roleid]);
           return redirect('/backpanel/users')->with('success','User added successfully');
         } else {
-          DB::update('update users set name = ?,email = ?,password = ? where id = ?',[$name,$email,Hash::make($password),$id]);
+          DB::update('update users set name = ?,email = ?,password = ?,roleId = ? where id = ?',[$name,$email,Hash::make($password),$roleid,$id]);
           return redirect('/backpanel/users')->with('success','User updated successfully');
         }
     }

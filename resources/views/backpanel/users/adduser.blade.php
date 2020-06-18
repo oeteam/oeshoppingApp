@@ -51,6 +51,16 @@
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <div class="controls">
+                                            <label>Role</label>
+                                            <select name="role" class="form-control">
+                                                @foreach($roles as $role)
+                                                    <option value="{{$role->id}}" {{ (isset($users[0]->roleId)&& $users[0]->roleId==$role->id)?'selected':''}}>{{ $role->rolename }}</option>
+                                                @endforeach
+                                            </select>
+                                        <div class="help-block"></div></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="controls">
                                             <label>E-mail</label>
                                             <input type="email" class="form-control" placeholder="Email" name="email" required="" data-validation-required-message="This email field is required"  value="@isset($users[0]->email){{ $users[0]->email }}@endisset">
                                         <div class="help-block"></div></div>

@@ -19,7 +19,8 @@ class SupplierController extends Controller
       if($id!=null) {
         $suppliers = DB::select('select * from suppliers where id = ?',[$id]);
       }
-      return view('backpanel/suppliers/addsupplier',['suppliers'=>$suppliers]);
+      $countries = DB::select('select * from countries');
+      return view('backpanel/suppliers/addsupplier',['suppliers'=>$suppliers,'countries'=>$countries]);
     }
     function submitsupplier(Request $request) {
         $errors = $this->validate($request,[
@@ -28,6 +29,9 @@ class SupplierController extends Controller
          'contactPerson'=>'required',
          'email'=>'required|email',
          'phone'=>'required',
+         'country'=> 'required',
+         'state'=>'required',
+         'password' => 'required|confirmed'
         ]);
         $id = $request->input('id');
         $companyName = $request->input('companyName');
@@ -35,11 +39,13 @@ class SupplierController extends Controller
         $contactPerson = $request->input('contactPerson');
         $email = $request->input('email');
         $phone = $request->input('phone');
+        $state = $request->input('state');
+        $password = $request->input('password');
         if($id=="") {
-          DB::insert('insert into suppliers (companyName,companyAdrs,contactPerson,email,phone) values(?,?,?,?,?)',[$companyName,$companyAdrs,$contactPerson,$email,$phone]);
+          DB::insert('insert into suppliers (companyName,companyAdrs,contactPerson,email,phone,country,state,password) values(?,?,?,?,?)',[$companyName,$companyAdrs,$contactPerson,$email,$phone,$country,$state,$password]);
           return redirect('/backpanel/suppliers')->with('success','Supplier added successfully');
         } else {
-          DB::update('update suppliers set companyName = ?,companyAdrs = ?,contactPerson = ?,email = ?,phone = ? where id = ?',[$companyName,$companyAdrs,$contactPerson,$email,$phone,$id]);
+          DB::update('update suppliers set companyName = ?,companyAdrs = ?,contactPerson = ?,email = ?,phone = ?,country = ?,state = ?,password = ? where id = ?',[$companyName,$companyAdrs,$contactPerson,$email,$phone,$country,$state,$password,$id]);
           return redirect('/backpanel/suppliers')->with('success','Supplier details updated successfully');
         }
     }
@@ -82,4 +88,8 @@ class SupplierController extends Controller
       DB::update('update suppliers set status = ? where id = ?',[$request->status,$request->supplierid]);
       return response()->json(['success'=>'Status updated successfully.']);
     }
+    function getStates(Request $request) {
+      $data = DB::select('select * from states where country_id = ?',[$request->countryid]);
+      return response()->json($data);
+  }
 }
